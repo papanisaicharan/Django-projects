@@ -1,0 +1,15 @@
+<h1>There are {{ count }} words in your text!</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+<h1>Your text:</h1>
+{{ fulltext }}
+<br>
+<br>
+{{ frequency}}
+<br>
+<br>
+<h1>Word count</h1>
+{% for word, count in frequency %}
+{{ word }} : {{ count}}
+<br>
+{% endfor %}

@@ -1,0 +1,17 @@
+django-admin startproject wordcount
+cd wordcount
+python manage.py runserver
+manage.py -> never touch unless you are expert
+porject folder ->
+	settings 
+		DEBUG
+		INSTALLED_APPS
+		MIDDLEWARE
+		TEMPLATES -> DIRS for templates
+		DATABASES -> by default sqlite
+		AUTH_PASSWORD_VALIDATORS
+	urls
+		
+	view.py -> routing functions
+	wsgi.py
+	
