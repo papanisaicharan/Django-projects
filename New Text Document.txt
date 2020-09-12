@@ -1,9 +1,11 @@
 django-admin startproject wordcount
 cd wordcount
 python manage.py runserver
+saicharan
+Charan@123
 manage.py -> never touch unless you are expert
 porject folder ->
-	settings 
+	settings
 		DEBUG
 		INSTALLED_APPS
 		MIDDLEWARE
@@ -11,7 +13,30 @@ porject folder ->
 		DATABASES -> by default sqlite
 		AUTH_PASSWORD_VALIDATORS
 	urls
-		
+
 	view.py -> routing functions
 	wsgi.py
-	
+--------------------------------------------------
+pip install virtualenv
+virtualenv myenv
+myenv\Scripts\activate
+deactivate
+
+gitignore
+
+Apps:
+python manage.py startapp blog
+Models:
+python manage.py migrate
+python manage.py makemigrations -> after defining in models.py
+python manage.py migrate
+
+python manage.py createsuperuser -> for admin
+---------------------------------------------------
+psql -U postgres
+postgres=# \du
+\password postgres
+postgres=# CREATE DATABASE portfoliodb;
+CREATE DATABASE
+-----------------
+python manage.py createsuperuser
