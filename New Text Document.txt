@@ -40,3 +40,8 @@ postgres=# CREATE DATABASE portfoliodb;
 CREATE DATABASE
 -----------------
 python manage.py createsuperuser
+
+python manage.py collectstatic
+  {% load staticfiles %}
+---------------
+putty -> for connect to a remote server -> digitalOcean

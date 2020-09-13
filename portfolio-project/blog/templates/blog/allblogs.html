@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-    {% load staticfiles %}
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Portfolio: Saicharan Papani</title>
+  <title>Blog posts</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -53,13 +53,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="https://www.linkedin.com/in/saicharan-papani-17202b129/">Linkedin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% static 'Resume_Saicharan.pdf' %}">Resume</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
           </li>
         </ul>
@@ -68,37 +68,20 @@
   </header>
 
   <main role="main">
+    <div class="container">
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <img src="{% static 'saicharan.jpg' %}" alt="" width=200 height=200>
-        <h1>Hi, I'm Saicharan</h1>
-        <p class="lead text-muted">
-          Hey, my name is Saicharan Papani and i love to code complex logic, build websites with Django.</p>
-        <p>
-          <a href="mailto:charansai850@gmail.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
-      </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div class="row">
-          {% for job in jobs.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="{{ job.image.url }}" alt="Image">
-              <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
+      <h1 class="text-center pt-3">Welcome to Saicharan's blog</h1>
+      <br>
+      <h2>Latest posts</h2>
+      <hr>
+      {% for blog in blogs.all %}
+      <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+      {{ blog.pub_date_pretty }}<br>
+      <img src="{{ blog.image.url }}" class="img-fluid" alt="image" width=200 height=200 />
+      <br>
+      <p class="card-text">{{ blog.summary }}</p>
+      {% endfor %}
     </div>
-
   </main>
 
   <footer class="text-muted">
