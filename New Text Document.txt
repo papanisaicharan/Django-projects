@@ -45,3 +45,7 @@ python manage.py collectstatic
   {% load staticfiles %}
 ---------------
 putty -> for connect to a remote server -> digitalOcean
+---------------------
+CREATE DATABASE producthunt
+
+python manage.py collectstatic
