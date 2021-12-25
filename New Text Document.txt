@@ -2,7 +2,7 @@ django-admin startproject wordcount
 cd wordcount
 python manage.py runserver
 saicharan
-Charan@123
+XXXXXXXX
 manage.py -> never touch unless you are expert
 porject folder ->
 	settings
